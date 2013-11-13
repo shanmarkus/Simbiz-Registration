@@ -3,9 +3,9 @@ class Config {
     
     private $db_host = 'localhost';
     private $db_port_num = '';
-    private $db_user = 'simbizc1_root';
-    private $db_password = 'password2014';
-    private $db_name = 'simbizc1_simbiz2014';
+    private $db_user = '';
+    private $db_password = '';
+    private $db_name = '';
     private $db_connection;
 
     function dbConnect()
