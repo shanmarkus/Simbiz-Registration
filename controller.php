@@ -74,10 +74,16 @@ class Controller {
         $success[count($data)];
         for ($i = 0; $i < count($data); $i++) {
             $ID = $data[$i]->getID();
-            $status = $_POST["status$ID"];
-            if ($status == 'n')
+            $statusInput = $_POST["status$ID"];
+	    $statusUser = $data[$i]->getStatus();
+            if ($statusInput == 'n'){
                 $this->payDAO->removeConfirmation($ID);
-            $success[$i] = $this->partDAO->updateStatus($ID, $status);
+            }
+	    elseif($statusInput =='a' && $statusUser!='a'){
+		$refCode=rand(10000,99999);
+	    	$insertResult=$this->payDAO->insertPayment($ID,$refCode,"","","","","");
+	    }
+            $success[$i] = $this->partDAO->updateStatus($ID, $statusInput);
         }
         $_SESSION['success'] = serialize($success);
         $_SESSION['data'] = serialize($data);

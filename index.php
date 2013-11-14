@@ -15,7 +15,6 @@
         <h1>SimBiz 2014 <br>Online Registration</h1>
 		
         <p align="center">
-		logo goes here biar keren dikit ehe
 		<p align="center">
 		<a class ="btn btn-primary btn-lg" href="login.php">Login</a>
 		<a class ="btn btn-success btn-lg" href="register.php">Register</a>
