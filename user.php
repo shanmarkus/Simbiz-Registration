@@ -46,7 +46,8 @@ include 'payment.php';
                     $ID = $participant[0]->getID();
                     $pass = $participant[0]->getPassword();
 
-                    echo "<div class='alert alert-success'><b>Registration successful!</b><br/>
+                    echo "
+                        <div class='alert alert-success'><b>Registration successful!</b><br/>
                    Please store your login details below!<br/>
                    Login ID : $ID<br/>
                    Password : $pass<br/><br/></div>";
